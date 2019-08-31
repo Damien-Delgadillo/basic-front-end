@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="../assets/proxy.duckduckgo-1.jpg"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="../src/styles.css">
+        <title>DamienD.com</title>
+</head>
+<body id='artBody'>
+	<img id='logo'src="../assets/proxy.duckduckgo-1.jpg" alt="stuffs">
+	<h2 id = 'header'>DamienD.com</h2>
+	<br>
+    <div class='parent'>
+        <a href="index.html"><div class='child'><p id='label'>Home</p></div></a>
+        <a href="art.html"><div class='child'><p id='label'>Art</p></div></a>
+        <a href="about.html"><div class='child'><p id='label'>About</p></div></a>
+        <a href="more.html"><div class='child active'><p id='label'>More</p></div></a>
+        <a href="contact.html"><div class='child'><p id='label'>Contact</p></div></a>
+    </div>
+        <h2>More Animation Tests</h2>
+        <div class='blah'>
+                <p class ='blahTxt'></p>
+        </div>
+        <script>
+            var myElement =  document.querySelector('.blah');
+            var elementTxt = document.querySelector('.blahTxt');
+            myElement.addEventListener('animationstart', start, false)
+            myElement.addEventListener('animationiteration', update, false)
+			myElement.addEventListener('animationend', end, false)
+            function start(e){
+                        document.body.style.backgroundColor = 'pink';
+                        elementTxt.innerHTML = 'Start';
+            }
+            function update(e){
+                        document.body.style.backgroundColor = 'steelblue';
+                        elementTxt.innerHTML = 'Iteration';
+            }
+            function end(e){
+                        document.body.style.backgroundColor = 'limegreen';
+                        myElement.innerHTML = 'Final State';
+            }
+        </script>
+        <figure></figure>
+        <div class='clrBody'>
+                <button id='clrBtn'>Change Color</button>
+        </div>
+        <script>
+            var color = ['#222f7e', '#f368e0', '#ee5253', '#10ac84'];
+            var i  = 0;
+            let colorButton = document.getElementById('clrBtn');
+            colorButton.onclick = () => {
+                if(i < color.length-1){
+					i++;
+					document.querySelector('.clrBody').style.background = color[i];
+                }else if(i === color.length-1){
+					i = 0;
+					document.querySelector('.clrBody').style.background = color[i];
+                }
+                console.log('Toggle Color Clicked');
+            }
+        </script>
+        <br>
+        <figure>
+                <img id ='zoom'src="https://www.romanticasheville.com/sites/default/files/images/basic_page/Asheville_Waterfalls.jpg" alt="EE">
+                <figcaption>
+                    <ul>
+                        <li>
+                            <a href="#zoom">Zoom In</a>
+                        </li>
+                        <li>
+                            <a href="#">Zoom Out</a>
+                        </li>
+                    </ul>
+                </figcaption>
+        </figure>
+        <main id = 'accordion'>
+                <section id='item1'>
+                        <a href="#item1"><h1>Item 1</h1></a>
+                        <p>Random Text</p>
+                </section>
+                <section id='item2'>
+                        <a href="#item2"><h1>Item 2</h1></a>
+                        <p>Random Text</p>
+                </section>
+                <section id='item3'>
+                        <a href="#item3"><h1>Item 3</h1></a>
+                        <p>Random Text</p>
+                </section>
+                <a id='close' href="#">Close All</a>
+        </main>
+</body>
+<script src='../src/file.js'></script>
+</html>

@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="../assets/proxy.duckduckgo-1.jpg"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>DamienD.com</title>
+        <link rel="stylesheet" href="../src/styles.css">
+        </head>
+<body id = 'artBody'>
+    <img id='logo'src="../assets/proxy.duckduckgo-1.jpg" alt="stuffs">
+	<h2 id = 'header'>DamienD.com</h2>
+	<br>
+    <div class='parent'>
+        <a href="index.html"><div class='child'><p id='label'>Home</p></div></a>
+        <a href="art.html"><div class='child'><p id='label'>Art</p></div></a>
+        <a href="about.html"><div class='child'><p id='label'>About</p></div></a>
+        <a href="more.html"><div class='child'><p id='label'>More</p></div></a>
+        <a href="contact.html"><div class='child active'><p id='label'>Contact</p></div></a>
+    </div>
+        <div class='contactCon'>
+        <h2>Contact Me</h2>
+        <form action='form.js' method='get' id='myForm'>
+        <p>Choices:</p>
+        <select name="choice" id="choices">
+                <option value="car">Work</option>
+                <option value="truck">Requests</option>
+                <option value="bike">Other</option>
+        </select>
+        <select id="choices2">
+                <option value="apple">Tech</option>
+                <option value="banana">Art</option>
+                <option value="cherry">Other</option>
+        </select>
+        <!--
+        <div id ='radioChoice'>
+                test: <input type="radio" >
+                test2: <input type="radio" checked>
+        </div>-->
+        <p>Enter Email:</p>
+        <input id='input' type="text">
+        <br>
+        <br>
+        <textarea id='sizable'type="text" placeholder="Input Message Here!" id='testb'></textarea>
+        <br>
+        <button type='submit' id='subButton'>
+                <strong>Submit Data</strong>
+        </button>
+        </form>
+        </div>
+        <p>Not a Real Form. Submit will cause GET error</p>
+</body>
+<script src='../src/file.js'></script>
+</html>
