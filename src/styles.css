@@ -96,6 +96,7 @@ figure{
         border-radius: 50%;
         background-color: #FFF;
         justify-content: center;
+        display: inline-block;
 }
 .blah .blahTxt{
         position: relative;
